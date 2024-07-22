@@ -1,0 +1,169 @@
+<!--
+var:	    Declares a variable ... accessible within the function it is defined in. (has function scope)
+let:	    Declares a block variable ... only accessible within the block it is defined in. (has block scope, inside if statment...)
+const:	    Declares a block constant
+if:	        Marks a block of statements to be executed on a condition
+switch:	    Marks a block of statements to be executed in different cases
+for: 	    Marks a block of statements to be executed in a loop
+function:	Declares a function
+return:	    Exits a function
+try:	    Implements error handling to a block of statements
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JavaScript Statment</title>
+    </head>
+
+    <body>
+        <script>
+            function func1(){
+
+                var x,y,res;
+                x=10;
+                y=5;
+                var z=6;
+                res=x+y+z;
+                
+                document.getElementById("res").innerHTML=res
+
+                var code="var x,y,res; <br> x=10; <br> y=5; <br> var z=6; <br> res=x+y+z;";
+                document.getElementById("code").innerHTML=code
+            }
+
+            function func2(){
+
+                var z=6;
+                if(z=6){
+                    let z=5;
+                }
+
+                document.getElementById("res").innerHTML=z
+                
+                var code="var z=6; <br> if (z == 6) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let z = 5;<br>}<br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('res').innerHTML = z;";
+                document.getElementById("code").innerHTML=code
+            }
+
+            function func3(){
+
+                var z=6;
+                if(z=6){
+                    let z=5;
+                    document.getElementById("res").innerHTML=z
+                }
+
+                var code="var z=6; <br> if (z == 6) { <br>&nbsp;&nbsp;&nbsp;&nbsp;let z = 5; <br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('res').innerHTML = z; <br>}";                ;
+                document.getElementById("code").innerHTML=code
+            }
+
+            function func4(){
+                const c=4;
+                // c=c+1;
+                document.getElementById("res").innerHTML=c;
+
+                var code="const c=4; <br> // c=c+1;"
+                document.getElementById("code").innerHTML=code
+            }
+
+            function func5(){
+                var x,y;
+                x=10;
+                y=5;
+                if(x>y){
+                    document.getElementById("res").innerHTML=x +" larger than "+y;
+                }
+                else if(x<y){
+                    document.getElementById("res").innerHTML=y +" larger than "+x;
+                }
+                else{
+                    document.getElementById("res").innerHTML=x +" Equal "+y;
+                }
+
+                var code = "var x, y; <br> x = 10; <br> y = 5; <br> if (x > y) { <br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('res').innerHTML = x + ' larger than ' + y; <br>} <br> else if (x < y) { <br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('res').innerHTML = y + ' larger than ' + x; <br>} <br> else { <br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('res').innerHTML = x + ' Equal ' + y; <br>}";
+                document.getElementById("code").innerHTML=code
+            }
+
+            function func6(){
+                var x,y;
+                x=10;
+                y=5;
+
+                switch(x/y){
+                    case 1:
+                        document.getElementById("res").innerHTML=1;
+                        break;
+                    case 2:
+                        document.getElementById("res").innerHTML=2;
+                        break;
+                    default:
+                        document.getElementById("res").innerHTML="Error";
+                        break;    
+                }
+
+                var code = "var x, y; <br> x = 10; <br> y = 5; <br> switch(x / y) { <br>&nbsp;&nbsp;&nbsp;&nbsp;case 1: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('res').innerHTML = 1; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br>&nbsp;&nbsp;&nbsp;&nbsp;case 2: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('res').innerHTML = 2; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br>&nbsp;&nbsp;&nbsp;&nbsp;default: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('res').innerHTML = 'Error'; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br>}";
+                document.getElementById("code").innerHTML=code
+            }
+
+            function func7(){
+                const student=["yousef", "ahmad", "osama"];
+                let student_length=student.length;
+                const teacher=[];
+                teacher[0]="basel";
+                teacher[1]="anas";
+
+                let stud="";
+
+                for(let i=0;i<student.length;i++){
+                    stud+=student[i]+"<br>";
+                }
+
+                document.getElementById("res").innerHTML=stud;
+
+                const code = "const student = [\"yousef\", \"ahmad\", \"osama\"]; <br> let student_length = student.length; <br> const teacher = []; <br> teacher[0] = \"basel\"; <br> teacher[1] = \"anas\"; <br> let stud = \"\"; <br> <br> for (let i = 0; i < student.length; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;stud += student[i] + \"<br>\"; <br>}";
+                document.getElementById("code").innerHTML=code
+
+            }
+
+
+        </script>
+
+        <button onclick="func1()">var</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func2()">let - Output OutSide Block</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func3()">let - inside OutSide Block</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func4()">const</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func5()">if</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func6()">switch</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func7()">for</button>
+        &nbsp;
+        &nbsp;
+
+
+        <h1>Code: </h1>
+        <h3 id="code">
+            Code Empty!!!!
+        </h3>
+
+        <br>
+        <br>
+        <h1>Result: </h1>
+        &nbsp;
+        &nbsp;
+        <label id="res"></label>
+        
+        
+    </body>
+</html>

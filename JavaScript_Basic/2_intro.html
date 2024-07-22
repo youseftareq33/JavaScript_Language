@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Light Test</title>
+    </head>
+
+    <body>
+        <center>
+            <p>
+                <h1 id="h1">The Light is Off</h1>
+    
+                <img id="light" src="images/light_off.png" alt="light off Image" width="171" height="171">
+    
+                <br>
+                <br>
+                <button onclick="document.getElementById('light').src='images/light_on.png';
+                document.getElementById('h1').innerHTML='The Light is On'">Turn On the light</button>
+                &nbsp;
+                &nbsp;
+                <button onclick="document.getElementById('light').src='images/light_off.png';
+                document.getElementById('h1').innerHTML='The Light is Off'">Turn Off the light</button>
+            </p>
+        </center>
+    </body>
+
+</html>

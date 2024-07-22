@@ -1,0 +1,61 @@
+<!--
+JavaScript can display data in different ways:
+
+1) Writing into an HTML element, using innerHTML
+2) Writing into the HTML output using document.write()
+3) Writing into an alert box, using window.alert() or alert()
+4) Writing into the browser console, using console.log()
+5) window.print()
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JavaScript Output</title>
+    </head>
+
+    <body>
+        <h1 id="h1">Default Text</h1>
+
+        <script>
+            function func1(){
+                document.getElementById("h1").innerHTML="innerHTML Worked"
+            }
+
+            function func2(){
+                document.write("document.write Worked <br> <br>");
+                document.write("Booooooooom !!! <br>");
+                document.write("is it delete your Html....... <br>");
+                document.write("The document.write() method should only be used for testing");
+            }
+
+            function func3(){
+                window.alert("window.alert Worked");
+            }
+
+            function func4(){
+                console.log("console.log Worked");
+            }
+
+            function func5(){
+                window.print();
+            }
+        </script>
+
+        <button onclick="func1()">innerHTML</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func2()">document.write</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func3()">window.alert</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func4()">console.log</button>
+        &nbsp;
+        &nbsp;
+        <button onclick="func5()">window.print</button>
+    </body>
+</html>

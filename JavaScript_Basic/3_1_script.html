@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JavaScript Script</title>
+    </head>
+
+    <body>
+
+        <p id="test">nothing</p>
+
+        <!-- Script Tag -->
+        <script> document.getElementById("test").innerHTML="The Script Tag is Worked"</script>
+
+        <!-- Inner JavaScript Function -->
+        <script>
+            function test_func_inner(){
+                document.getElementById("test").innerHTML="The inner function is worked"
+            }
+        </script>
+
+        <button onclick="test_func_inner()">Inner Script Function</button>
+        <br>
+        <br>
+        <!-- External JavaScript Function -->
+        <script src="3_2_scriptTest.js"></script>
+
+        <button onclick="test_func_external()">External Script Function</button>
+
+    </body>
+
+</html>
