@@ -29,7 +29,7 @@ const stud2_copy=stud2; // copy object stud2
 const person={name:"rami", age:25};
 
 // get
-let name=person.name;
+let name=person.name; // person['name']
 
 // add
 person.id=1;
